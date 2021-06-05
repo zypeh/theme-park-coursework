@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twinkle Park</title>
 
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/a0b760c693.js"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- google fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -23,15 +17,15 @@
       rel="stylesheet"
     />
 
-    <!-- style.css styling link -->
-    <link rel="stylesheet" href="css/twinklepstyles.css" />
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="assets/css/twinklepstyles.css" />
   </head>
 
   <body>
     <header id="title">
       <!-- Nav Bar -->
       <div class="logo">
-        <a href=""><img src="assets/TPLogo.png" /></a>
+        <a href=""><img src="assets/img/TPLogo.png" /></a>
       </div>
       <a class="logo" href="index.html"
         ><h1 class="logo-wording">Twinkle Park</h1></a
@@ -46,7 +40,6 @@
       </nav>
     </header>
 
-    <hr />
     <!-- COVID19 UPDATES -->
     <section id="covid19">
       <div class="covid19-updates">
@@ -54,73 +47,120 @@
         <p>COVID 19 Guidelines</p>
       </div>
     </section>
-    <hr />
     <!-- IMAGE GALLERY SLIDER -->
+    <!-- The slider will use JavaScript to display theme park images in an interval -->
     <section id="gallery">
+      <div class="gallery-nav arrow">
+        <a href="" class="gallery-nav-prev"></a>
+      </div>
       <div class="image-gallery">
-        <!-- Add images for slider gallery here -->
-        <p>IMAGE GALLERY SLIDER</p>
+        <div class="gallery-item">
+          <img src="" alt="" class="gallery-img" />
+
+          <!-- Using data-desc attribute to hide or show .gallery-desc if it doesn't or does contain description respectively -->
+          <p class="gallery-desc" data-desc="false"></p>
+        </div>
+        <div class="gallery-item">
+          <img src="" alt="" class="gallery-img" />
+
+          <!-- Using data-desc attribute to hide or show .gallery-desc if it doesn't or does contain description respectively -->
+          <p class="gallery-desc" data-desc="false"></p>
+        </div>
+        <div class="gallery-item">
+          <img src="" alt="" class="gallery-img" />
+
+          <!-- Using data-desc attribute to hide or show .gallery-desc if it doesn't or does contain description respectively -->
+          <p class="gallery-desc" data-desc="false"></p>
+        </div>
+      </div>
+      <div class="gallery-nav arrow">
+        <a href="" class="gallery-nav-next"></a>
+      </div>
+      <div class="gallery-nav icons">
+        <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
       </div>
     </section>
 
-    <hr />
+    <!-- MAIN CONTENT OF MAIN PAGE -->
+    <main id="main-content">
+      <!-- About section. 50% width on large screens -->
+      <section class="about-park">
+        <h2>About Twinkle Park</h2>
+      </section>
 
-    <!-- BOTTOM SECTION OF MAIN PAGE -->
-    <main id="bottom-section">
-      <div class="row">
-        <!-- ABOUT TWINKLE PARK -->
-        <div class="about-park">
-          <!-- Insert content about twinkle park here -->
-          <h3>ABOUT TWINKLE PARK</h3>
-        </div>
+      <!-- News section. 50% width on large screens -->
+      <section class="latest-news">
+        <h2>Latest News</h2>
+      </section>
 
-        <!-- LATEST NEWS -->
-        <div class="latest-news">
-          <!-- insert latest news about twinkle park here -->
-          <h3>LATEST NEWS</h3>
-        </div>
-        <!-- HOW TO GET HERE -->
-        <aside>
-          <!-- insert map leading to twinkle park HERE -->
-          <div class="location">
-            <p>1001 Atha Drive, bakersfield, CA 93301</p>
-            <br />
-            <br />
-            <div id="map">HOW TO GET HERE - MAP</div>
+      <!-- Address information. 100% width -->
+      <section class="location">
+        <h2>Our Address</h2>
+        <div class="address-container">
+          <div class="address">
+            <span class="road">1001 Atha Drive</span>
+            <span class="city">Bakersfield</span>
+            <span class="zip">CA 93301</span>
           </div>
-
-          <!-- SERVICES PROVIDED -->
-
-          <div class="services">
-            <!-- ATM, MEDIAL, ETC. -->
-            <h3>SERVICES PROVIDED:</h3>
-            <p>ATM, MEDIAL, ETC.</p>
+          <div class="phone">
+            <a href="tell:555-5555-555">555-5555-555</a>
           </div>
-        </aside>
-      </div>
+          <div class="email">
+            <a href="mailto:info@twinklepark.com">info@twinklepark.com</a>
+          </div>
+        </div>
+        <div class="map-container"></div>
+      </section>
+
+       <!-- Services provided. 100% width -->
+      <section class="services">
+        <h2>Services Provided</h2>
+        <p>ATM, MEDIAL, ETC.</p>
+      </section>
     </main>
 
-    <hr />
     <!-- Footer -->
     <footer id="footer">
-      <!-- ADD FOOTER CONTENT HERE -->
-      <div class="footer-section">
-        <h2>Newsletter</h2>
-        <button type="button" class="newsletter-btn">
-          <i class="far fa-envelope"></i>YOUR EMAIL ADDRESS>
-        </button>
-      </div>
+      <!-- Newsletter sign up section -->
+      <section class="newsletter">
+        <h3>Signup for our newsletter</h3>
+        <div class="input-container">
+          <label for="newsletter-signup">Enter email</label>
+          <input
+            type="email"
+            id="newsletter-signup"
+            placeholder="Your Email Address"
+          />
+          <i class="far fa-envelope input-icon"></i>
+        </div>
+      </section>
 
-      <div class="links">
-        <p>Follow us on social media</p>
-        <a class="twitter-btn"><i class="fab fa-twitter-square"></i></a>
-        <a class="facebook-btn"><i class="fab fa-facebook-square"></i> </a>
-        <a class="instagram-btn"><i class="fab fa-instagram-square"></i></a>
-        <br />
-        <small class="copyright"
-          >&copy; 2021 Twinkle Park. All rights reserved.</small
-        >
-      </div>
+      <!-- Social media links for the park-->
+      <section class="social-links">
+        <h3>Follow us on social media</h3>
+        <a class="twitter-btn" href="https://twiter.com/twinklepark">
+          <i class="fab fa-twitter-square"></i>
+        </a>
+        <a class="facebook-btn" href="https://facebook.com/twinklepark">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a class="instagram-btn" href="https://instagram.com/twinklepark">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+      </section>
+
+      <!-- Copyright notice section. This will hold 100% width -->
+      <section class="copyright-notice">
+        <small class="copyright">
+          &copy; 2021 Twinkle Park. All rights reserved
+        </small>
+      </section>
     </footer>
+
+    <!-- import fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a0b760c693.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
