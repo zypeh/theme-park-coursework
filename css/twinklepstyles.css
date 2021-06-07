@@ -24,10 +24,20 @@ header {
   font-weight: bold;
 }
 
-.logo {
+.logo{
+    position: absolute;
+    left:50%;
+    top: 3%;
+    transform: translate(0,0);
+    content: '';
+    transition: 1s;
+    border-radius: 50px;
+    margin-left: -50px;
+}
+/* .logo {
   content: "";
   text-align: center;
-}
+} */
 
 img {
   width: 80px;
@@ -108,10 +118,9 @@ a:hover {
   transition: 0.5s;
 }
 
-a.logo,
-a:hover {
-  background: rgb(33, 103, 160);
-  transition: 0.5s;
+a.logo,a:hover{
+    background:#9ccef7;
+    transition: .5s;
 }
 
 .covid19-updates {
@@ -126,3 +135,10 @@ a:hover {
 
   height: 300px;
 }
+
+.footer-section{
+    height: 200px;
+    width:250px;
+    background-color: blue;
+}
+
