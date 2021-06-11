@@ -19,6 +19,15 @@ In this assignment, your team will make the HTML pages for the theme park web si
   * Upload the pages to the static web page system
   * Validate the code in the pages
 
+### Part 3 - Appearance CSS
+In this assignment, your group will apply appearance CSS properties to the HTML for the theme
+park web site that you designed in the first part of the assginment.
+  * Markup wireframes with appearance CSS
+  * Set up and link stylesheet
+  * Upload the pages to the static web page system
+  * Validate the code in the pages using [W3C code validator](https://validator.w3.org/)
+      * including styling text, font familites, HTML object colouring, colour definitions
+
 #### Review criteria
 We are looking for a well constructed skeleton that reflects the design in the wireframes and for content that is relevant and appropriate.
 Marks will be awarded for the following:
