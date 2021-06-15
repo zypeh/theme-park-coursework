@@ -76,7 +76,7 @@
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
 
-#gallery .fas:hover {
+#gallery .arrow .fas:hover {
   color: rgba(255, 255, 255, 1);
 }
 

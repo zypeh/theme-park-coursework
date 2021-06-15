@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Get all gallery items
-  const galleryItems = document.querySelectorAll('#gallery .gallery-item');
+  const galleryItems = Array.from(
+    document.querySelectorAll('#gallery .gallery-item')
+  );
 
   // Get navigation icons container
   const galleryIcons = document.querySelector('#gallery .gallery-nav.icons');
 
+  // Get navigation arrows
+  const galleryNavPrev = document.querySelector('#gallery .gallery-nav-prev');
+  const galleryNavNext = document.querySelector('#gallery .gallery-nav-next');
+
   // Navigation icon list array
   // Adding them to an array while they are also being appended to the DOM to make selecting and styling easier for later
   const galleryIconsList = [];
-
-  // Array to contain gallery items position
-  const galleryItemsPos = [];
 
   // Current active gallery item index
   let currentItemIndex = 0;
@@ -18,29 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial position for the gallery items and populate nav icons
   for (let i = 0; i < galleryItems.length; i++) {
     // Place the first one in view and hide the others
-    if (i === 0) {
-      galleryItems[i].style.left = '0';
-      // Push an object containing gallery item, index and current position to the position array
-      galleryItemsPos.push({
-        item: galleryItems[i],
-        index: i,
-        pos: '0'
-      });
-    } else {
-      galleryItems[i].style.left = '100%';
-      galleryItemsPos.push({
-        item: galleryItems[i],
-        index: i,
-        pos: '100%'
-      });
-    }
+    i === 0
+      ? (galleryItems[i].style.left = '0')
+      : (galleryItems[i].style.left = '100%');
 
     // Populate gallery navigation icons
     // Create anchor element
-    let icon = document.createElement('a');
-    icon.href = '#';
+    let icon = document.createElement('span');
     icon.classList.add('gallery-nav-icon');
-    icon.setAttribute('data-index', i);
     // Create fontawesome icon element
     let iconFA = document.createElement('i');
     iconFA.classList.add('fas', 'fa-circle');
@@ -53,26 +41,63 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryIconsList.push(icon);
   }
 
-  let autoSlide = setInterval(() => {
-    let prevItem = calcNextPrev(currentItemIndex, galleryItemsPos, 'prev');
-    let currentItem = galleryItemsPos[currentItemIndex];
-    let nextItem = calcNextPrev(currentItemIndex, galleryItemsPos, 'next');
+  // Set auto slide interval
+  let autoSlide = setInterval(gallerySlide, 3000);
 
-    prevItem.item.style.zIndex = '0';
-    currentItem.item.style.left = '-100%';
-    nextItem.item.style.zIndex = '1';
-    nextItem.item.style.left = '0';
-    prevItem.item.style.left = '100%';
-    prevItem.item.style.display = 'block';
+  // Attach event listeners to previous and next arrows
+  galleryNavNext.addEventListener('click', gallerySlide);
+  galleryNavPrev.addEventListener('click', gallerySlide);
 
-    currentItemIndex = galleryItemsPos.indexOf(nextItem);
+  // Function to control gallery slide properties
+  function gallerySlide(e) {
+    // If function called from an event, prevent default and stop auto slide
+    if (e) {
+      e.preventDefault();
+      clearInterval(autoSlide);
+    }
 
+    // Get previous gallery item
+    let prevItem = calcNextPrev(currentItemIndex, galleryItems, 'prev');
+    // Get current visible gallery item
+    let currentItem = galleryItems[currentItemIndex];
+    // Get next gallery item
+    let nextItem = calcNextPrev(currentItemIndex, galleryItems, 'next');
+
+    // If previous arrow is clicked, slide images to the right
+    if (e && e.target.classList.contains('fa-chevron-circle-left')) {
+      // Move previous gallery item in to view
+      prevItem.style.zIndex = '1';
+      prevItem.style.left = '0';
+      // Move current visible gallery item to the right
+      currentItem.style.left = '100%';
+      // Move next gallery item to the back and left to make it ready for the next slide
+      nextItem.style.zIndex = '0';
+      nextItem.style.left = '-100%';
+
+      // Set active gallery item index
+      currentItemIndex = galleryItems.indexOf(prevItem);
+    }
+    // If next arrow is clicked or based on interval slide images to the left
+    else {
+      // Move previous gallery item to the back and right to make it ready for the next slide
+      prevItem.style.zIndex = '0';
+      prevItem.style.left = '100%';
+      // Move current visible gallery item to the left
+      currentItem.style.left = '-100%';
+      // Move next gallery item in to view
+      nextItem.style.zIndex = '1';
+      nextItem.style.left = '0';
+
+      // Set active gallery item index
+      currentItemIndex = galleryItems.indexOf(nextItem);
+    }
+
+    // Add active class to the nav icons based on current gallery item index
     for (let i = 0; i < galleryIconsList.length; i++) {
       galleryIconsList[i].classList.remove('active');
     }
-
     galleryIconsList[currentItemIndex].classList.add('active');
-  }, 3000);
+  }
 
   // A function to return the next item or the previous item in an array
   // If there is no next item, it sets the first index as the next item
