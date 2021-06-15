@@ -1,0 +1,96 @@
+#gallery {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative; /* So the child elements will take position in reference to this container */
+}
+
+/*
+  Gallery image container style start
+*/
+#gallery .image-gallery {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#gallery .gallery-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make gallery images full width of container and center them vertically */
+#gallery .gallery-img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* Gallery description style */
+#gallery .gallery-desc {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+
+  width: 80%;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(33, 103, 160);
+  font-weight: 500;
+}
+
+/*
+  Gallery image container style end
+*/
+
+/*
+  Gallery navigation style start
+*/
+/* Set all gallery nav elements' position as absolute */
+#gallery .gallery-nav {
+  position: absolute;
+}
+
+/* Center gallery nav arrows vertically */
+#gallery .arrow {
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+
+/* Custom style for gallery nav arrows */
+#gallery .fas {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.5s;
+}
+
+#gallery .fas:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+#gallery .gallery-nav-prev {
+  left: 5%;
+}
+
+#gallery .gallery-nav-next {
+  right: 5%;
+}
+
+/* gallery nav icon styles */
+#gallery .icons {
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, 0);
+}
+
+#gallery .icons .fas {
+  font-size: 0.8rem;
+}
+
+/*
+  Gallery navigation style end
+*/

@@ -19,6 +19,8 @@
 
     <!-- main stylesheet -->
     <link rel="stylesheet" href="assets/css/twinklepstyles.css" />
+    <!-- gallery slider stylesheet -->
+    <link rel="stylesheet" href="assets/css/gallery-slider.css" />
   </head>
 
   <body>
@@ -53,34 +55,41 @@
     <!-- IMAGE GALLERY SLIDER -->
     <!-- The slider will use JavaScript to display theme park images in an interval -->
     <section id="gallery">
-      <div class="gallery-nav arrow">
-        <a href="" class="gallery-nav-prev"></a>
+      <div class="gallery-nav arrow gallery-nav-prev">
+        <a href="#">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
       </div>
       <div class="image-gallery">
         <div class="gallery-item">
           <img src="assets/img/attraction-01.jpg" alt="" class="gallery-img" />
 
           <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-          <p class="gallery-desc" data-desc="false"></p>
+          <p class="gallery-desc" data-desc="false">Roller Coaster</p>
         </div>
         <div class="gallery-item">
           <img src="assets/img/attraction-02.jpg" alt="" class="gallery-img" />
 
           <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-          <p class="gallery-desc" data-desc="false"></p>
+          <p class="gallery-desc" data-desc="false">Spin Ride</p>
         </div>
         <div class="gallery-item">
           <img src="assets/img/attraction-03.jpg" alt="" class="gallery-img" />
 
           <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-          <p class="gallery-desc" data-desc="false"></p>
+          <p class="gallery-desc" data-desc="false">Ferris Wheel</p>
         </div>
       </div>
-      <div class="gallery-nav arrow">
-        <a href="" class="gallery-nav-next"></a>
+      <div class="gallery-nav arrow gallery-nav-next">
+        <a href="#">
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
       </div>
       <div class="gallery-nav icons">
         <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
+        <a href="#" class="gallery-nav-icon"><i class="fas fa-circle"></i></a>
+        <a href="#" class="gallery-nav-icon"><i class="fas fa-circle"></i></a>
+        <a href="#" class="gallery-nav-icon"><i class="fas fa-circle"></i></a>
       </div>
     </section>
 
