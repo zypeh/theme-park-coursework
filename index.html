@@ -92,40 +92,70 @@
 
     <!-- MAIN CONTENT OF MAIN PAGE -->
     <main id="main-content">
-      <!-- About section. 50% width on large screens -->
-      <section class="about-park">
-        <h2>About Twinkle Park</h2>
-      </section>
+      <div class="main-container">
+        <!-- About section. 50% width on large screens -->
+        <section class="about-park left">
+          <h2>About Twinkle Park</h2>
 
-      <!-- News section. 50% width on large screens -->
-      <section class="latest-news">
-        <h2>Latest News</h2>
-      </section>
+          <p>We are the one-stop place for fun over 20 attractions spread across 10 acres, Twinkle park provides the ultimate theme park experience in 6 adventure zones — Water Park, Amusement Park, Extreme Park, Show Park. Come experience them all by booking your tickets online.</p>
 
-      <!-- Address information. 100% width -->
-      <section class="location">
-        <h2>Our Address</h2>
-        <div class="address-container">
-          <div class="address">
-            <span class="road">1001 Atha Drive</span>
-            <span class="city">Bakersfield</span>
-            <span class="zip">CA 93301</span>
+          <p>Once you step in, you can spend the entire day here! Explore the various dining options available at the theme park. If you need some place to sleep, we are just next door to the Twinkle Star Resort Hotel & Spa.</p>
+            
+          <p>We also play host to some of the hottest acts and global events so stay tuned for upcoming events and promotion by following Twinkle Park on Facebook, Twitter and Instagram.</p>
+          <img src="assets/img/index.jpg" alt="Amusement Park" class="main-hero-pic">
+        </section>
+
+        <!-- News section. 50% width on large screens -->
+        <section class="latest-news mid">
+          <h2>Latest News</h2>
+
+          <div class="news">
+            <h4>Learn More About Our Enhanced Health and Safety Measures</h4>
+            <p>Find out what you need to know before you go.</p>
+            <br>
+            <p><u>Learn More</u></p>
           </div>
-          <div class="phone">
-            <a href="tell:555-5555-555">555-5555-555</a>
-          </div>
-          <div class="email">
-            <a href="mailto:info@twinklepark.com">info@twinklepark.com</a>
-          </div>
+
+          <div class="sales">
+            <h4>Stay in the Atmosphere and Save Up to 25% on Select Stays</h4>
+            <p>This special offer is valid on select rooms at a Twinkle park partner for stays from July 5, 2021 to October 2, 2021. Book now thru September 16, 2021.</p>
+            <br>
+            <p><u>Learn More</u></p>
+
+        </section>
+
+        <!-- Address information. 100% width -->
+        <div class="right">
+          <section class="location">
+            <h2>Our Address</h2>
+            <div class="address-container">
+              <div class="address">
+                <span class="road">1001 Atha Drive</span>
+                <span class="city">Bakersfield</span>
+                <span class="zip">CA 93301</span>
+              </div>
+              <div class="phone">
+                <a href="tell:555-5555-555">555-5555-555</a>
+              </div>
+              <div class="email">
+                <a href="mailto:info@twinklepark.com">info@twinklepark.com</a>
+              </div>
+
+              <div class="map-container">
+                <div id="map"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="services">
+            <h2>Services Provided</h2>
+            <p>ATM, MEDIAL, ETC.</p>
+          </section>
+
         </div>
-        <div class="map-container"></div>
-      </section>
-
+      </div>
       <!-- Services provided. 100% width -->
-      <section class="services">
-        <h2>Services Provided</h2>
-        <p>ATM, MEDIAL, ETC.</p>
-      </section>
+
     </main>
 
     <!-- Footer -->
@@ -173,5 +203,10 @@
     ></script>
     <!-- gallery slider script -->
     <script src="assets/js/gallery-slider.js"></script>
+    <script src="assets/js/google-map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9qf2SdqI-5Le5yaAik7OGwydSXAKsmY4&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   </body>
 </html>
