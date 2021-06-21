@@ -9,7 +9,7 @@
 /* Global styles start */
 
 body {
-  font-family: "montserrat";
+  font-family: 'montserrat';
   font-size: 16px;
 }
 
@@ -45,7 +45,7 @@ header {
 
 .logo .logo-wording {
   color: rgb(221, 141, 141);
-  font-family: "Sacramento", cursive;
+  font-family: 'Sacramento', cursive;
   font-size: 4rem;
   text-align: center;
   /* font-weight: 800; */
@@ -121,29 +121,4 @@ footer {
 .covid19-updates {
   margin: 10px 0;
   text-align: center;
-}
-
-/* Attrations page styles */
-
-.section_title {
-  margin-top: 1em;
-}
-.attraction_img {
-  width: 250px;
-  height: 250px;
-  border-radius: 5%;
-}
-
-.attractions {
-  text-align: center;
-}
-
-.attraction {
-  margin: 1em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.attraction_item {
-  margin: 0.5em;
 }
