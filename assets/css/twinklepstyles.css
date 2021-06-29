@@ -255,6 +255,7 @@ footer {
     line-height: 2em;
     background-color: rgba(156, 206, 247, 0.3);
     padding: 5px;
+    width: 100%;
   }
   
   .visuallyhidden {
