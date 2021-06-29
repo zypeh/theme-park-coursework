@@ -170,23 +170,20 @@ footer {
 
 /* Styles for the Booking Page */
 
+
 .booking-container {
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
   }
   
   /* Split in two columns */
   .booking-child {
-    width: 50%;
-    float: left;
-    padding: 20px;
+    width: 100%;
+    padding: 15px;
   }  
   
-  .pass-container {
-    text-align: left;
-  }
-  
-  .pass-container > h2,
-  .form-container > h2
+  .booking-title
   {
     text-align: center;
     border: 3px solid rgb(156, 206, 247);
@@ -194,6 +191,23 @@ footer {
   }
   
   /* Styles for the boxes with passes description */
+  .pass-container {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .pass-child {
+    width: 40%;
+    height: 300px;
+    background-color: rgb(198, 224, 245);
+    padding: 10px;
+    margin: 20px;
+    text-align:left;
+    cursor: pointer;
+  }
+
   .pass-title
    {
     color: rgb(221, 141, 141);
@@ -203,42 +217,37 @@ footer {
     margin: 10px;
   }
   
-  .pass-child {
-    width: 45%;
-    height: 300px;
-    border: 10px inset rgb(221, 141, 141);
-    padding: 10px;
-    margin: 20px;
-    text-align:left;
-    box-sizing: border-box;
-    float:left;
-    position: relative;
-  }
-  
   .pass-child p {
     margin: 10px;
+  }
+
+  .pass-label {
+    cursor: pointer;
   }
   
   .pass-child:hover {
     transition: background-color 0.5s;
-    background-color: rgba(156, 206, 247, 0.4);
+    background-color: rgba(35, 156, 255, 0.4);
+  }
+
+  .pass-child:active {
+    transition: background-color 0.2s;
+    background-color: rgba(35, 156, 255, 0.6);
+    transform: translate(0, 2px);
   }
   
   .pass-price {
     color: rgb(221, 141, 141);
     font-family: 'Sacramento', cursive;
-    font-size: 2.5rem;
+    font-size: 2em;
     font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    text-align: right;
   }
   
   /* Styles for the form */
   .form-container {
-    display:inline-block ;
-    position: relative;
-    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
   }
   
   .form-content {
@@ -246,11 +255,21 @@ footer {
     line-height: 2em;
     background-color: rgba(156, 206, 247, 0.3);
     padding: 5px;
-    width: 100%;
   }
   
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
   .form-content input {
-    padding: 8px;
+    padding: 6px;
   }
   
   .form-name-email input {
@@ -260,24 +279,30 @@ footer {
   .form-content p {
     padding: 5px;
   }
+
+  .contact-visitors {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-visitors-child {
+    width: 50%;
+    margin: 10px;
+  }
   
   /* Styles for the choose your pass and dates */
   .choose-date,
   .choose-pass {
-    margin: 1em;
+    margin: 10px;
     padding-left: 15px;
-  }
-  
-  .choose-date legend,
-  .choose-pass legend {
-    padding: 0px 15px;
+    display: flex;
   }
   
   .choose-pass-column {
-    width: 50%;
-    float: left;
-    padding-left: 10px;
-    padding-top: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    text-align: justify;
   }
   
   .choose-pass label {
@@ -290,11 +315,6 @@ footer {
     font-weight: bold;
     color: rgb(221, 141, 141);
     font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .choose-pass:checked{
-    background-color: rgba(33, 103, 160, 0.9);
   }
   
   /* Delete original radio selector */
@@ -310,9 +330,9 @@ footer {
     position: absolute;
     top:0;
     left:0;
-    width:20px; 
-    height:20px;
-    background-color: rgba(156, 206, 247, 0.4);
+    width:15px; 
+    height:15px;
+    background-color: rgba(21, 123, 207, 0.6);
     border-radius: 50%;
     transition: .4s background-color;
   }
@@ -321,13 +341,12 @@ footer {
     content: "";
     position: absolute;
     display: none;
-    
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     background-color: rgb(241, 232, 234);
-    width:8px;
-    height:8px;
+    width:6px;
+    height:6px;
     border-radius:50%;
   }
   label:hover span {
@@ -360,4 +379,40 @@ footer {
     transition: 0.2s;
   }
   
+  @media (max-width: 900px) {
+    .booking-container {
+      flex-direction: column;
+  }
+  
+    .pass-disappear
+    {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  
+  }
+  
+  @media (max-width: 1237px) {
+    .p-disappear {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .pass-price {
+      font-size: 1.5em;
+    }
+  }
+
   /* Styles for the Booking Page End */

@@ -39,187 +39,191 @@
     </nav>
   </header>
 
-  <main class="bottom-section">
-    <div class="booking-container">
-      <div class="booking-child">
-
+  <main class="booking-container">
+    <div class="booking-child">
+      <div class="pass-disappear">
         <!-- THEME PARK PASSES DESCRIPTION -->
+        <h2 class="booking-title">Passes available at the park</h2>
         <section class="pass-container">
-          <h2>Passes available at the park</h2>
           <div class="pass-child">
-            <h3 class="pass-title">Single Pass</h3>
-            <p>
-              You want to have fun at our park and do not have much time? This
-              pass is for you.
-            </p>
-            <p>
-              This pass allows you to use any attractions in the park for a whole
-              day.
-            </p>
-            <p class="pass-price">
-              £15
-            </p>
+            <label class="pass-label" for="single-pass">
+              <h3 class="pass-title">Single Pass</h3>
+              <p class="p-disappear">
+                You want to have fun at our park and do not have much time? This
+                pass is for you.
+              </p>
+              <p>
+                This pass allows you to use any attractions in the park for a whole
+                day.
+              </p>
+              <p class="pass-price">
+                £15
+              </p>
           </div>
+          </label>
           <div class="pass-child">
-            <h3 class="pass-title">Weekend Pass</h3>
-            <p>
-              A whole weekend having fun at our amazing attractions? This is
-              definitely your pass!
-            </p>
-            <p>
-              This pass allows you to use any attractions in the park for a one
-              weekend (Saturday and Sunday).
-            </p>
-            <p class="pass-price">
-              £25
-            </p>
+            <label class="pass-label" for="weekend-pass">
+              <h3 class="pass-title">Weekend Pass</h3>
+              <p class="p-disappear">
+                A weekend having fun at our amazing attractions? This is your pass!
+              </p>
+              <p>
+                This pass allows you to use any attractions in the park for a one
+                weekend.
+              </p>
+              <p class="pass-price">
+                £25
+              </p>
           </div>
+          </label>
           <div class="pass-child">
-            <h3 class="pass-title">Family Pass</h3>
-            <p>
-              So you have a whole family of fun people? This is the pass for you
-              all!
-            </p>
-            <p>
-              This pass allows you and up to six people from your family (spouse
-              and children) to use any attractions in the park for one day.
-            </p>
-            <p class="pass-price">
-              £50
-            </p>
+            <label class="pass-label" for="family-pass">
+              <h3 class="pass-title">Family Pass</h3>
+              <p class="p-disappear">
+                So you have a whole family of fun people? This is the pass for you
+                all!
+              </p>
+              <p>
+                This pass allows you and up to six people to use any attractions in the park for one day.
+              </p>
+              <p class="pass-price">
+                £50
+              </p>
           </div>
+          </label>
           <div class="pass-child">
-            <h3 class="pass-title">Annual Pass</h3>
-            <p>
-              You love our park and want to come many times during the year? We've
-              got you covered.
-            </p>
-            <p>
-              This pass allows you to come to our park as many days as you want
-              during a calendar year.
-            </p>
-            <p class="pass-price">
-              £150
-            </p>
+            <label class="pass-label" for="annual-pass">
+              <h3 class="pass-title">Annual Pass</h3>
+              <p class="p-disappear">
+                You love our park and want to come many times during the year? We've
+                got you covered.
+              </p>
+              <p>
+                This pass allows you to come to our park as many days as you want
+                during a calendar year.
+              </p>
+              <p class="pass-price">
+                £150
+              </p>
           </div>
+          </label>
         </section>
       </div>
+    </div>
 
-      <div class="booking-child">
-
-        <!-- BOOKING SECTION -->
-        <section class="form-container">
-          <h2>Book your pass here</h2>
-          <form class="form-content">
-            <div class="form-name-email">
-              <p>
-                <label for="full-name">Name:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="your full name" required />
-              </p>
-            </div>
-            <div class="form-name-email">
-              <p>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="your email" required />
-            </div>
-            </p>
-            <div class="contact-number">
-              <p>
-                <label for="contact-number">Contact Number:</label>
-                <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}"
-                  placeholder="(12-456-7890)" required />
-              </p>
-            </div>
-            <div class="visitor-number">
-              <p>
-                <label for="number-visitor">How many people?</label>
-                <input type="number" id="number-visitor" name="number-visitor" min=1 required />
-              </p>
-            </div>
+    <!-- FORM SECTION -->
+    <div class="booking-child">
+      <h2 class="booking-title">Book your pass here</h2>
+      <section class="form-container">
+        <form class=" form-content">
+          <div class="form-name-email">
             <p>
-
-            <fieldset class="choose-pass">
-              <legend>Choose your pass</legend>
-              <div class="choose-pass-column">
-                <label for="single-pass">Single
-                  Pass<input type="radio" value="single-pass" id="single-pass" name="your-pass"> <span></span></label>
-                <br>
-                <label for="family-pass"> Family
-                  Pass<input type="radio" value="family-pass" id="family-pass" name="your-pass"><span></span></label>
-              </div>
-
-              <div class="choose-pass-column">
-                <label for="weekend-pass">Weekend Pass<input type="radio" value="weekend-pass" id="weekend-pass"
-                    name="your-pass">
-                  <span></span></label>
-                <br>
-                <label for="annual-pass">Annual Pass<input type="radio" value="annual-pass" id="annual-pass"
-                    name="your-pass">
-                  <span></span></label>
-              </div>
-
-
-            </fieldset>
+              <label for="full-name" class="visuallyhidden">Full name:</label>
+              <input type="text" id="full-name" name="full-name" placeholder="Your full name" required />
             </p>
-            <fieldset class="choose-date">
-              <legend>
-                Your dates
-              </legend>
-              <p>
-                <label for="date-initial">First day:</label>
-                <input type="date" id="date-initial" name="date-initial" required />
-                <br> <br>
-                <label for="date-end">Last day: </label>
-                <input type="date" id="date-end" name="date-end" required />
-              <p>
-            </fieldset>
-
+          </div>
+          <div class="form-name-email">
             <p>
-              <button> BOOK YOUR PASS </button>
+              <label for="email" class="visuallyhidden">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
+          </p>
+          <div class="contact-visitors">
+            <div class="contact-visitors-child">
+              <label for="contact-number">Contact Number:</label>
+              <input type="tel" id="contact-number" name="contact-number" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}"
+                placeholder="(12-456-7890)" required />
+            </div>
+            <div class="contact-visitors-child">
+              <label for="number-visitor">How many people?</label>
+              <input type="number" id="number-visitor" name="number-visitor" min=1 required />
+            </div>
+
+          </div>
+
+          <fieldset class="choose-pass">
+            <legend>Choose your pass</legend>
+
+            <div class="choose-pass-column">
+              <label for="single-pass">Single
+                Pass<input type="radio" value="single-pass" id="single-pass" name="your-pass" checked="checked">
+                <span></span></label>
+              <br>
+              <label for="family-pass"> Family
+                Pass<input type="radio" value="family-pass" id="family-pass" name="your-pass"><span></span></label>
+            </div>
+
+            <div class="choose-pass-column">
+              <label for="weekend-pass">Weekend Pass<input type="radio" value="weekend-pass" id="weekend-pass"
+                  name="your-pass">
+                <span></span></label>
+              <br>
+              <label for="annual-pass">Annual Pass<input type="radio" value="annual-pass" id="annual-pass"
+                  name="your-pass">
+                <span></span></label>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="choose-date">
+            <legend>
+              Your dates
+            </legend>
+            <p>
+              <label for="date-initial">First day:</label>
+              <input type="date" id="date-initial" name="date-initial" required />
             </p>
+            <p>
+              <label for="date-end">Last day: </label>
+              <input type="date" id="date-end" name="date-end" required />
+            </p>
+          </fieldset>
 
-          </form>
-        </section>
-      </div>
+          <p>
+            <button> BOOK YOUR PASS </button>
+          </p>
 
-      <!-- IMAGE GALLERY SLIDER -->
-      <!-- The slider will use JavaScript to display theme park images in an interval -->
-      <section id="gallery">
-        <div class="gallery-nav arrow gallery-nav-prev">
-          <a href="#">
-            <i class="fas fa-chevron-circle-left"></i>
-          </a>
-        </div>
-        <div class="image-gallery">
-          <div class="gallery-item">
-            <img src="assets/img/attraction-01.jpg" alt="Speedy Roller" class="gallery-img" />
-
-            <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-            <p class="gallery-desc" data-desc="false">Speedy Roller</p>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/attraction-02.jpg" alt="Neon Swing" class="gallery-img" />
-
-            <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-            <p class="gallery-desc" data-desc="false">Neon Swing</p>
-          </div>
-          <div class="gallery-item">
-            <img src="assets/img/attraction-03.jpg" alt="iWheel" class="gallery-img" />
-
-            <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
-            <p class="gallery-desc" data-desc="false">iWheel</p>
-          </div>
-        </div>
-        <div class="gallery-nav arrow gallery-nav-next">
-          <a href="#">
-            <i class="fas fa-chevron-circle-right"></i>
-          </a>
-        </div>
-        <div class="gallery-nav icons">
-          <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
-        </div>
+        </form>
       </section>
+    </div>
   </main>
+  <!-- IMAGE GALLERY SLIDER -->
+  <!-- The slider will use JavaScript to display theme park images in an interval -->
+  <section id="gallery">
+    <div class="gallery-nav arrow gallery-nav-prev">
+      <a href="#">
+        <i class="fas fa-chevron-circle-left"></i>
+      </a>
+    </div>
+    <div class="image-gallery">
+      <div class="gallery-item">
+        <img src="assets/img/attraction-01.jpg" alt="Speedy Roller" class="gallery-img" />
+
+        <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+        <p class="gallery-desc" data-desc="false">Speedy Roller</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/attraction-02.jpg" alt="Neon Swing" class="gallery-img" />
+
+        <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+        <p class="gallery-desc" data-desc="false">Neon Swing</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/attraction-03.jpg" alt="iWheel" class="gallery-img" />
+
+        <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+        <p class="gallery-desc" data-desc="false">iWheel</p>
+      </div>
+    </div>
+    <div class="gallery-nav arrow gallery-nav-next">
+      <a href="#">
+        <i class="fas fa-chevron-circle-right"></i>
+      </a>
+    </div>
+    <div class="gallery-nav icons">
+      <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer id="footer">
