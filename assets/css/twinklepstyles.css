@@ -181,8 +181,10 @@ main .row {
   height: 100%;
 }
 
+
 @media (max-width: 960px) {
   .main-container {
+
     flex-wrap: wrap;
   }
 
@@ -286,9 +288,11 @@ main .row {
     border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   }
 
+
   [for='newsletter-signup'] {
     display: block;
     margin-bottom: 10px;
+
   }
 }
 

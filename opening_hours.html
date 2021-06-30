@@ -19,6 +19,8 @@
 
     <!-- main stylesheet -->
     <link rel="stylesheet" href="assets/css/twinklepstyles.css" />
+    <!-- gallery slider stylesheet -->
+    <link rel="stylesheet" href="assets/css/gallery-slider.css" />
   </head>
 
   <body>
@@ -28,40 +30,104 @@
         <img
           class="logo-img"
           alt="Twinkle Park logo"
-          src="assets/img/TPLogo.png"
+          src="assets/img/ferris-wheels.png"
         />
         <h1 class="logo-wording">Twinkle Park</h1>
       </a>
 
       <nav>
         <ul class="active-ul">
+          <li><a href="index.html">Home</a></li>
           <li><a href="booking.html">Booking</a></li>
           <li><a class="active" href="opening_hours.html">Opening Hours</a></li>
           <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="#">Accomodation</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- OPENING HOURS -->
-    <section id="opening_hours">
-      <div>
-        <h2>Opening Hours of Twinkle Park</h2>
-
-        <p>Hours:</p>
-
-        <b>Monday</b> 11:45AM–1PM <b>Tuesday</b> 11:45AM–1PM
-        <b>Wednesday</b> 11:45AM–1PM <b>Thursday</b> 11:45AM–1PM
-        <b>Friday</b> 11:45AM–1PM <b>Saturday</b> 11:45AM–1PM Sunday Closed
+    <!-- COVID19 UPDATES -->
+    <section id="covid19">
+      <div class="covid19-updates">
+        <!-- Add content for covid19 updates div here -->
+        <p>COVID 19 Guidelines</p>
       </div>
     </section>
+
     <!-- IMAGE GALLERY SLIDER -->
+    <!-- The slider will use JavaScript to display theme park images in an interval -->
     <section id="gallery">
+      <div class="gallery-nav arrow gallery-nav-prev">
+        <a href="#">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
+      </div>
       <div class="image-gallery">
-        <!-- Add images for slider gallery here -->
-        <p>IMAGE GALLERY SLIDER</p>
+        <div class="gallery-item">
+          <img
+            src="assets/img/attraction-01.jpg"
+            alt="Speedy Roller"
+            class="gallery-img"
+          />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">Speedy Roller</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="assets/img/attraction-02.jpg"
+            alt="Neon Swing"
+            class="gallery-img"
+          />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">Neon Swing</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="assets/img/attraction-03.jpg"
+            alt="iWheel"
+            class="gallery-img"
+          />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">iWheel</p>
+        </div>
+      </div>
+      <div class="gallery-nav arrow gallery-nav-next">
+        <a href="#">
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
+      </div>
+      <div class="gallery-nav icons">
+        <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
       </div>
     </section>
+
+
+    <main id="main-content">
+      <!-- OPENING HOURS -->
+      <section id="opening-hours">
+        <div>
+          <h2 class="title">Opening Hours of Twinkle Park</h2>
+
+          <h3 class="small-title">Hours:</h3>
+
+          <ul>
+            <li><b>Monday</b>11:45AM–1PM</li>
+            <li><b>Tuesday</b> 11:45AM–1PM</li>
+            <li><b>Wednesday</b> 11:45AM–1PM</li>
+            <li><b>Thursday</b> 11:45AM–1PM</li>
+            <li><b>Friday</b> 11:45AM–1PM</li>
+            <li><b>Saturday</b> 11:45AM–1PM</li>
+            <li>
+              <b class="red">Sunday</b>
+              <p class="red">Closed</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
 
     <!-- Footer -->
     <footer id="footer">
@@ -129,5 +195,7 @@
       src="https://kit.fontawesome.com/a0b760c693.js"
       crossorigin="anonymous"
     ></script>
+    <!-- gallery slider script -->
+    <script src="assets/js/gallery-slider.js"></script>
   </body>
 </html>
