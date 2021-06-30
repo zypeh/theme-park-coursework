@@ -32,6 +32,7 @@ header {
   background-color: rgb(156, 206, 247);
   width: 100%;
   padding: 15px 0;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 
 .logo {
@@ -93,17 +94,6 @@ main .row {
   margin: auto;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  max-width: 2048px;
-  margin: auto;
-  /* background-color: rgb(33, 103, 160); */
-  /* color: white; */
-}
-
 .links a {
   font-size: 30px;
 }
@@ -113,7 +103,10 @@ footer {
   text-align: center;
 }
 
-.location, .services, .about-park, .latest-news {
+.location,
+.services,
+.about-park,
+.latest-news {
   padding: 30px;
 }
 
@@ -124,12 +117,14 @@ footer {
   object-fit: cover;
 }
 
-.news, .sales {
+.news,
+.sales {
   color: #fff;
   padding: 32px 16px;
 }
 
-.news h4, .sales h4 {
+.news h4,
+.sales h4 {
   padding-bottom: 10px;
 }
 
@@ -154,12 +149,13 @@ footer {
 .main-container .left p {
   padding: 10px 0;
 }
-.main-container .mid, .main-container .right {
+.main-container .mid,
+.main-container .right {
   width: 30%;
 }
 
 .map-container {
-  width:100%;
+  width: 100%;
   height: 300px;
   padding-top: 30px;
 }
@@ -168,97 +164,315 @@ footer {
   height: 100%;
 }
 
-/* Styles for the Booking Page */
+/* Footer styles start */
 
+#footer {
+  background-color: rgb(156, 206, 247);
+  width: 100%;
+  padding: 30px;
+  border-top: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+.footer-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-row h3 {
+  margin-bottom: 10px;
+}
+
+#newsletter-signup {
+  padding: 0.2em 0.5em;
+  margin-left: 0.5em;
+  min-width: 200px;
+}
+
+.input-container {
+  margin-top: 16px;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-links a {
+  font-size: 2em;
+}
+
+.social-links .fab {
+  display: block;
+  text-shadow: 1px 1px rgba(100, 100, 100, 0.3);
+}
+
+.social-links .twitter-btn {
+  color: #31c6f7;
+}
+
+.social-links .facebook-btn {
+  color: #395693;
+}
+
+.social-links .instagram-btn {
+  color: #115384;
+}
+
+.copyright-notice {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-row .newsletter {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+  }
+
+  [for="newsletter-signup"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Footer styles end */
+
+/* Styles for the Booking Page */
 
 .booking-container {
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  }
-  
-  /* Split in two columns */
-  .booking-child {
-    width: 100%;
-    padding: 15px;
-  }  
-  
-  .booking-title
-  {
-    text-align: center;
-    border: 3px solid rgb(156, 206, 247);
-    padding: 15px 0px;
-  }
-  
-  /* Styles for the boxes with passes description */
-  .pass-container {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .pass-child {
-    width: 40%;
-    height: 300px;
-    background-color: rgb(198, 224, 245);
-    padding: 10px;
-    margin: 20px;
-    text-align:left;
-    cursor: pointer;
+}
+
+/* Split in two columns */
+.booking-child {
+  width: 100%;
+  padding: 15px;
+}
+
+.booking-title {
+  text-align: center;
+  border: 3px solid rgb(156, 206, 247);
+  padding: 15px 0px;
+}
+
+/* Styles for the boxes with passes description */
+.pass-container {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pass-child {
+  width: 40%;
+  height: 300px;
+  background-color: rgb(198, 224, 245);
+  padding: 10px;
+  margin: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pass-title {
+  color: rgb(221, 141, 141);
+  font-family: 'Sacramento', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.pass-child p {
+  margin: 10px;
+}
+
+.pass-label {
+  cursor: pointer;
+}
+
+.pass-child:hover {
+  transition: background-color 0.5s;
+  background-color: rgba(35, 156, 255, 0.4);
+}
+
+.pass-child:active {
+  transition: background-color 0.2s;
+  background-color: rgba(35, 156, 255, 0.6);
+  transform: translate(0, 2px);
+}
+
+.pass-price {
+  color: rgb(221, 141, 141);
+  font-family: 'Sacramento', cursive;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Styles for the form */
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-content {
+  margin-top: 1em;
+  line-height: 2em;
+  background-color: rgba(156, 206, 247, 0.3);
+  padding: 5px;
+  width: 100%;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.form-content input {
+  padding: 6px;
+}
+
+.form-name-email input {
+  width: 100%;
+}
+
+.form-content p {
+  padding: 5px;
+}
+
+.contact-visitors {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-visitors-child {
+  width: 50%;
+  margin: 10px;
+}
+
+/* Styles for the choose your pass and dates */
+.choose-date,
+.choose-pass {
+  margin: 10px;
+  padding-left: 15px;
+  display: flex;
+}
+
+.choose-pass-column {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  text-align: justify;
+}
+
+.choose-pass label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  color: rgb(221, 141, 141);
+  font-size: 2em;
+}
+
+/* Delete original radio selector */
+.choose-pass input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Create a new radio selector */
+.choose-pass label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(21, 123, 207, 0.6);
+  border-radius: 50%;
+  transition: 0.4s background-color;
+}
+
+label span:after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(241, 232, 234);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+label:hover span {
+  background-color: rgba(33, 103, 160, 0.3);
+}
+
+label input:checked ~ span {
+  background-color: rgb(33, 103, 160);
+}
+label input:checked ~ span:after {
+  display: block;
+}
+
+/* Style for the button */
+.form-content button {
+  background-color: rgb(33, 103, 160);
+  font-weight: 700;
+  padding: 20px 25px;
+  margin: 5px;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.8em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-content button:hover {
+  background-color: rgba(33, 103, 160, 0.9);
+  transition: 0.2s;
+}
+
+@media (max-width: 900px) {
+  .booking-container {
+    flex-direction: column;
   }
 
-  .pass-title
-   {
-    color: rgb(221, 141, 141);
-    font-family: 'Sacramento', cursive;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 10px;
+  .pass-disappear {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
-  
-  .pass-child p {
-    margin: 10px;
-  }
+}
 
-  .pass-label {
-    cursor: pointer;
-  }
-  
-  .pass-child:hover {
-    transition: background-color 0.5s;
-    background-color: rgba(35, 156, 255, 0.4);
-  }
-
-  .pass-child:active {
-    transition: background-color 0.2s;
-    background-color: rgba(35, 156, 255, 0.6);
-    transform: translate(0, 2px);
-  }
-  
-  .pass-price {
-    color: rgb(221, 141, 141);
-    font-family: 'Sacramento', cursive;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: right;
-  }
-  
-  /* Styles for the form */
-  .form-container {
-    display:flex;
-    justify-content: space-evenly;
-  }
-  
-  .form-content {
-    margin-top: 1em;
-    line-height: 2em;
-    background-color: rgba(156, 206, 247, 0.3);
-    padding: 5px;
-    width: 100%;
-  }
-  
-  .visuallyhidden {
+@media (max-width: 1237px) {
+  .p-disappear {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -269,151 +483,9 @@ footer {
     width: 1px;
   }
 
-  .form-content input {
-    padding: 6px;
+  .pass-price {
+    font-size: 1.5em;
   }
-  
-  .form-name-email input {
-    width: 100%;
-  }
-  
-  .form-content p {
-    padding: 5px;
-  }
+}
 
-  .contact-visitors {
-    display: flex;
-    justify-content: center;
-  }
-
-  .contact-visitors-child {
-    width: 50%;
-    margin: 10px;
-  }
-  
-  /* Styles for the choose your pass and dates */
-  .choose-date,
-  .choose-pass {
-    margin: 10px;
-    padding-left: 15px;
-    display: flex;
-  }
-  
-  .choose-pass-column {
-    width: 100%;
-    padding: 10px;
-    margin: 5px;
-    text-align: justify;
-  }
-  
-  .choose-pass label {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    padding-left:30px; 
-    padding-bottom: 20px;
-    font-family: 'Sacramento', cursive;
-    font-weight: bold;
-    color: rgb(221, 141, 141);
-    font-size: 2em;
-  }
-  
-  /* Delete original radio selector */
-  .choose-pass input {
-    position: absolute;
-    opacity: 0;
-    width:0; 
-    height:0;
-  }
-  
-  /* Create a new radio selector */
-  .choose-pass label span {
-    position: absolute;
-    top:0;
-    left:0;
-    width:15px; 
-    height:15px;
-    background-color: rgba(21, 123, 207, 0.6);
-    border-radius: 50%;
-    transition: .4s background-color;
-  }
-  
-  label span:after {
-    content: "";
-    position: absolute;
-    display: none;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(241, 232, 234);
-    width:6px;
-    height:6px;
-    border-radius:50%;
-  }
-  label:hover span {
-    background-color: rgba(33, 103, 160, 0.3);
-  }
-  
-  label input:checked ~ span {
-    background-color: rgb(33, 103, 160);
-  }
-  label input:checked ~ span:after {
-    display:block;
-  }
-  
-  /* Style for the button */
-  .form-content button {
-    background-color: rgb(33, 103, 160);
-    font-weight: 700;
-    padding: 20px 25px;
-    margin: 5px;
-    color: white;
-    font-size: 1em;
-    border: none;
-    border-radius: 0.8em;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .form-content button:hover{
-    background-color: rgba(33, 103, 160, 0.9);
-    transition: 0.2s;
-  }
-  
-  @media (max-width: 900px) {
-    .booking-container {
-      flex-direction: column;
-  }
-  
-    .pass-disappear
-    {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-  
-  }
-  
-  @media (max-width: 1237px) {
-    .p-disappear {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-
-    .pass-price {
-      font-size: 1.5em;
-    }
-  }
-
-  /* Styles for the Booking Page End */
+/* Styles for the Booking Page End */
