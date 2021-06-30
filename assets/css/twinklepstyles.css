@@ -181,6 +181,38 @@ main .row {
   height: 100%;
 }
 
+@media (max-width: 960px) {
+  .main-container {
+    flex-wrap: wrap;
+  }
+
+  .main-container .left,
+  .main-container .mid {
+    width: 50%;
+  }
+
+  .main-container .right {
+    width: 100%;
+  }
+
+  .main-container .left,
+  .main-container .mid,
+  .main-container .location {
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .main-container .left,
+  .main-container .mid {
+    width: 100%;
+  }
+}
+
 /* Footer styles start */
 
 #footer {
@@ -254,7 +286,7 @@ main .row {
     border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   }
 
-  [for="newsletter-signup"] {
+  [for='newsletter-signup'] {
     display: block;
     margin-bottom: 10px;
   }
@@ -292,7 +324,7 @@ main .row {
 
 .pass-child {
   width: 40%;
-  height: 300px;
+  /* height: 300px; */ /* Removed height as text overflows with fixed height */
   background-color: rgb(198, 224, 245);
   padding: 10px;
   margin: 20px;
@@ -502,6 +534,23 @@ label input:checked ~ span:after {
 
   .pass-price {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 460px) {
+  .choose-pass,
+  .contact-visitors {
+    flex-direction: column;
+  }
+
+  .contact-visitors {
+    padding: 5px;
+  }
+
+  .contact-visitors-child,
+  .contact-visitors-child input {
+    width: 100%;
+    margin: 0px;
   }
 }
 
