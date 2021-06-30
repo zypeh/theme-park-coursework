@@ -116,8 +116,10 @@ main .row {
 }
 
 .covid19-updates {
-  margin: 10px 0;
   text-align: center;
+  background-color: #c90e0ee8;
+  padding: 15px 30px;
+  color: #fff;
 }
 
 .location,
@@ -181,10 +183,8 @@ main .row {
   height: 100%;
 }
 
-
 @media (max-width: 960px) {
   .main-container {
-
     flex-wrap: wrap;
   }
 
@@ -288,11 +288,9 @@ main .row {
     border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   }
 
-
   [for='newsletter-signup'] {
     display: block;
     margin-bottom: 10px;
-
   }
 }
 
@@ -559,3 +557,32 @@ label input:checked ~ span:after {
 }
 
 /* Styles for the Booking Page End */
+
+/* Opening hours */
+#opening-hours {
+  padding: 3rem;
+  width: 50%;
+  margin: auto;
+}
+
+#opening-hours .title {
+  padding-bottom: 30px;
+}
+
+#opening-hours .small-title {
+  padding-bottom: 16px;
+}
+
+#opening-hours b {
+  color: purple;
+}
+
+#opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 130px;
+}
+
+#opening-hours .red {
+  color: red;
+}
