@@ -19,6 +19,8 @@
 
     <!-- main stylesheet -->
     <link rel="stylesheet" href="assets/css/twinklepstyles.css" />
+    <!-- gallery slider stylesheet -->
+    <link rel="stylesheet" href="assets/css/gallery-slider.css" />
   </head>
 
   <body>
@@ -44,25 +46,73 @@
       </nav>
     </header>
 
-    <!-- OPENING HOURS -->
-    <section id="opening_hours">
-      <div>
-        <h2>Opening Hours of Twinkle Park</h2>
-
-        <p>Hours:</p>
-
-        <b>Monday</b> 11:45AM–1PM <b>Tuesday</b> 11:45AM–1PM
-        <b>Wednesday</b> 11:45AM–1PM <b>Thursday</b> 11:45AM–1PM
-        <b>Friday</b> 11:45AM–1PM <b>Saturday</b> 11:45AM–1PM Sunday Closed
+    <!-- COVID19 UPDATES -->
+    <section id="covid19">
+      <div class="covid19-updates">
+        <!-- Add content for covid19 updates div here -->
+        <p>COVID 19 Guidelines</p>
       </div>
     </section>
+
     <!-- IMAGE GALLERY SLIDER -->
+    <!-- The slider will use JavaScript to display theme park images in an interval -->
     <section id="gallery">
+      <div class="gallery-nav arrow gallery-nav-prev">
+        <a href="#">
+          <i class="fas fa-chevron-circle-left"></i>
+        </a>
+      </div>
       <div class="image-gallery">
-        <!-- Add images for slider gallery here -->
-        <p>IMAGE GALLERY SLIDER</p>
+        <div class="gallery-item">
+          <img src="assets/img/attraction-01.jpg" alt="Speedy Roller" class="gallery-img" />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">Speedy Roller</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/attraction-02.jpg" alt="Neon Swing" class="gallery-img" />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">Neon Swing</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/attraction-03.jpg" alt="iWheel" class="gallery-img" />
+
+          <!-- Using data-desc attribute to show or hide .gallery-desc if it does or does not contain description respectively -->
+          <p class="gallery-desc" data-desc="false">iWheel</p>
+        </div>
+      </div>
+      <div class="gallery-nav arrow gallery-nav-next">
+        <a href="#">
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
+      </div>
+      <div class="gallery-nav icons">
+        <!-- Number of icons will be populated automatically by JavaScript depending on the number of gallery items that are in the .image-gallery -->
       </div>
     </section>
+
+    <main id="main-content">
+      <!-- OPENING HOURS -->
+      <section id="opening-hours">
+        <div>
+          <h2 class="title">Opening Hours of Twinkle Park</h2>
+
+          <h3 class="small-title">Hours:</h3>
+
+          <ul>
+            <li><b>Monday</b>11:45AM–1PM</li>
+            <li><b>Tuesday</b> 11:45AM–1PM</li>
+            <li><b>Wednesday</b> 11:45AM–1PM</li>
+            <li><b>Thursday</b> 11:45AM–1PM</li>
+            <li><b>Friday</b> 11:45AM–1PM</li>
+            <li><b>Saturday</b> 11:45AM–1PM</li>
+            <li><b class="red">Sunday</b><p class="red">Closed</p></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
     <!-- Footer -->
     <footer id="footer">
       <!-- Newsletter sign up section -->
@@ -78,7 +128,7 @@
           <i class="far fa-envelope input-icon"></i>
         </div>
       </section>
-
+    
       <!-- Social media links for the park-->
       <section class="social-links">
         <h3>Follow us on social media</h3>
@@ -92,7 +142,7 @@
           <i class="fab fa-instagram-square"></i>
         </a>
       </section>
-
+    
       <!-- Copyright notice section. This will hold 100% width -->
       <section class="copyright-notice">
         <small class="copyright">
@@ -106,5 +156,7 @@
       src="https://kit.fontawesome.com/a0b760c693.js"
       crossorigin="anonymous"
     ></script>
+    <!-- gallery slider script -->
+    <script src="assets/js/gallery-slider.js"></script>
   </body>
 </html>

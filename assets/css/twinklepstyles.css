@@ -168,6 +168,34 @@ footer {
   height: 100%;
 }
 
+/* Opening hours */
+#opening-hours {
+  padding: 3rem;
+  width: 50%;
+  margin: auto;
+}
+
+#opening-hours .title {
+  padding-bottom: 30px;
+}
+
+#opening-hours .small-title {
+  padding-bottom: 16px;
+}
+
+#opening-hours b {
+  color: purple;
+}
+
+#opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 130px;
+}
+
+#opening-hours .red {
+  color: red;
+}
 /* Styles for the Booking Page */
 
 
@@ -243,7 +271,7 @@ footer {
     font-weight: bold;
     text-align: right;
   }
-  
+
   /* Styles for the form */
   .form-container {
     display:flex;
