@@ -3,6 +3,7 @@
   height: 300px;
   overflow: hidden;
   position: relative; /* So the child elements will take position in reference to this container */
+  margin-bottom: 20px;
 }
 
 /*
