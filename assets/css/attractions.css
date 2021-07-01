@@ -1,4 +1,3 @@
-
 /* Attrations page styles start */
 
 .section_title {
@@ -25,6 +24,11 @@
 .attraction_img {
   width: 100%;
   height: 100%;
+  transition: transform 0.5s;
+}
+
+.attraction_item:hover .attraction_img {
+  transform: scale(1.05);
 }
 
 .attractions {
