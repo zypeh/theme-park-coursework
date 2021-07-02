@@ -85,6 +85,17 @@ button:hover{
   align-items: center;
 }
 
+@keyframes spin-logo {
+  100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.logo-img:hover{
+  animation: 2s spin-logo infinite linear;
+}
+
 .logo .logo-img {
   width: 100px;
   margin-bottom: 1em;
