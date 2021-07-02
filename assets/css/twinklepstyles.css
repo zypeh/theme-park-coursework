@@ -387,6 +387,7 @@ main .row {
   margin: 20px;
   text-align: left;
   cursor: pointer;
+  position: relative;
 }
 
 .pass-title {
@@ -401,8 +402,14 @@ main .row {
   margin: 10px;
 }
 
-.pass-label {
+.pass-child .pass-label {
   cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .pass-child:hover {
