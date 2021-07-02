@@ -25,6 +25,9 @@ img {
 u {
   text-decoration: underline;
 }
+h2 {
+  margin-bottom: 1em;
+}
 /* Global styles end */
 
 /* Header styles start */
@@ -35,48 +38,46 @@ header {
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 
-
 /* sign in form */
 
-.signin-container{
-  color:rgb(80, 80, 80);
+.signin-container {
+  color: rgb(80, 80, 80);
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   position: absolute;
-  left:80%;
+  left: 80%;
   top: 3%;
-  border-width:2px;
-  border-style:dotted;
+  border-width: 2px;
+  border-style: dotted;
   border-color: rgb(221, 141, 141);
   border-radius: 5px;
   font-family: sans-serif;
   font-size: 13px;
-  }
+}
 
-input[type=text],input[type=password]{
+input[type='text'],
+input[type='password'] {
   padding: 6px;
   margin-top: 5px;
   margin-bottom: 10px;
-  font-size:14px;
+  font-size: 14px;
   border-color: pink;
   border-radius: 5px;
-  width:150px;
+  width: 150px;
 }
 
-button{
+button {
   color: #fff;
   background-color: rgb(33, 103, 160);
   padding: 5px;
   border-radius: 5px;
-  
 }
 
-button:hover{
-  background-color:rgb(247, 172, 190);
+button:hover {
+  background-color: rgb(247, 172, 190);
 }
-
 
 .logo {
   width: 100%;
@@ -87,12 +88,12 @@ button:hover{
 
 @keyframes spin-logo {
   100% {
-      transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
-.logo-img:hover{
+.logo-img:hover {
   animation: 2s spin-logo infinite linear;
 }
 
@@ -281,7 +282,7 @@ main .row {
 .footer-row {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .footer-row h3 {
@@ -613,30 +614,21 @@ label input:checked ~ span:after {
 /* Styles for the Booking Page End */
 
 /* Opening hours */
-#opening-hours {
-  padding: 3rem;
-  width: 50%;
-  margin: auto;
+.opening-hours {
+  padding: 30px;
 }
 
-#opening-hours .title {
-  padding-bottom: 30px;
+.opening-hours span {
+  color: #690e7f;
+  font-weight: bold;
 }
 
-#opening-hours .small-title {
-  padding-bottom: 16px;
-}
-
-#opening-hours b {
-  color: purple;
-}
-
-#opening-hours li {
+.opening-hours li {
   display: flex;
   justify-content: space-between;
-  padding-right: 130px;
+  margin-bottom: 0.25em;
 }
 
-#opening-hours .red {
-  color: red;
+.opening-hours .red {
+  color: #a52a2a;
 }
