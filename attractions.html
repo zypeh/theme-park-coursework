@@ -26,6 +26,12 @@
   <body>
     <header id="title">
       <!-- Nav Bar -->
+      <div class="sign-in-button">
+        <button id="sign-in-trigger" data-attr="modal">Sign In</button>
+      </div>
+      <div class="sign-in-button">
+        <button id="sign-in-trigger" data-attr="modal">Sign In</button>
+      </div>
       <a class="logo" href="index.html">
         <img
           class="logo-img"
@@ -161,17 +167,29 @@
           <h3>Follow us on social media</h3>
           <ul class="social-links-container">
             <li>
-              <a class="twitter-btn" href="https://twiter.com/twinklepark" title="Twitter">
+              <a
+                class="twitter-btn"
+                href="https://twiter.com/twinklepark"
+                title="Twitter"
+              >
                 <i class="fab fa-twitter-square"></i>
               </a>
             </li>
             <li>
-              <a class="facebook-btn" href="https://facebook.com/twinklepark" title="Facebook">
+              <a
+                class="facebook-btn"
+                href="https://facebook.com/twinklepark"
+                title="Facebook"
+              >
                 <i class="fab fa-facebook-square"></i>
               </a>
             </li>
             <li>
-              <a class="instagram-btn" href="https://instagram.com/twinklepark" title="Instagram">
+              <a
+                class="instagram-btn"
+                href="https://instagram.com/twinklepark"
+                title="Instagram"
+              >
                 <i class="fab fa-instagram-square"></i>
               </a>
             </li>
@@ -189,10 +207,29 @@
       </div>
     </footer>
 
+    <!-- login modal. Triggered by javascript -->
+    <aside id="login-modal" class="modal-hidden" data-attr="modal">
+      <div class="sign-in-container">
+        <i class="fas fa-window-close"></i>
+        <h2>Already booked? Sign in</h2>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Sign In</button>
+        </form>
+        <a href="index.html"> Forgot Password? </a>
+      </div>
+    </aside>
+
+    <!-- gray background to be displayed when sign in modal is shown -->
+    <div id="modal-bg" class="modal-hidden" data-attr="modal"></div>
+
     <!-- import fontawesome -->
     <script
       src="https://kit.fontawesome.com/a0b760c693.js"
       crossorigin="anonymous"
     ></script>
+    <!-- sign in modal script -->
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>

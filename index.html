@@ -26,16 +26,8 @@
   <body>
     <header id="title">
       <!-- Nav Bar -->
-      <div class="signin-container">
-        <form>
-          <p>Already booked? Sign in</p>
-          <input type="text" placeholder="Username" />
-          <br />
-          <input type="password" placeholder="Password" />
-          <a href="index.html">
-            Forgot Password? <button class="btn" type="submit">Sign In</button>
-          </a>
-        </form>
+      <div class="sign-in-button">
+        <button id="sign-in-trigger" data-attr="modal">Sign In</button>
       </div>
       <a class="logo" href="index.html">
         <img
@@ -194,9 +186,15 @@
             </div>
           </section>
 
+          <!-- Services provided. 100% width -->
           <section class="services">
             <h2>Services Provided</h2>
-            <p>In the compound, you can find an ATM. We also have a first aid office and a certified medical person in the park. Additionally, there is a park with a qualified pet-sitter to keep your dogs while you are having fun.</p>
+            <p>
+              In the compound, you can find an ATM. We also have a first aid
+              office and a certified medical person in the park. Additionally,
+              there is a park with a qualified pet-sitter to keep your dogs
+              while you are having fun.
+            </p>
           </section>
 
           <section class="opening-hours">
@@ -213,7 +211,6 @@
           </section>
         </div>
       </div>
-      <!-- Services provided. 100% width -->
     </main>
 
     <!-- Footer -->
@@ -277,6 +274,23 @@
       </div>
     </footer>
 
+    <!-- login modal. Triggered by javascript -->
+    <aside id="login-modal" class="modal-hidden" data-attr="modal">
+      <div class="sign-in-container">
+        <i class="fas fa-window-close"></i>
+        <h2>Already booked? Sign in</h2>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Sign In</button>
+        </form>
+        <a href="index.html"> Forgot Password? </a>
+      </div>
+    </aside>
+
+    <!-- gray background to be displayed when sign in modal is shown -->
+    <div id="modal-bg" class="modal-hidden" data-attr="modal"></div>
+
     <!-- import fontawesome -->
     <script
       src="https://kit.fontawesome.com/a0b760c693.js"
@@ -284,6 +298,8 @@
     ></script>
     <!-- gallery slider script -->
     <script src="assets/js/gallery-slider.js"></script>
+    <!-- sign in modal script -->
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/google-map.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9qf2SdqI-5Le5yaAik7OGwydSXAKsmY4&callback=initMap&libraries=&v=weekly"
